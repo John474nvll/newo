@@ -36,6 +36,13 @@ export interface ProjectFile {
   path: string;
 }
 
+export interface DatabaseSchema {
+  tables: {
+    name: string;
+    columns: { name: string; type: string; primaryKey?: boolean; nullable?: boolean }[];
+  }[];
+}
+
 export interface GeneratedWebsite {
   id: string;
   userId?: string;
@@ -52,9 +59,10 @@ export interface GeneratedWebsite {
   figmaUrl?: string;
   sizeKb?: number;
   deployUrl?: string;
+  dbSchema?: DatabaseSchema;
 }
 
-export type PaymentMethod = 'BANCOLOMBIA' | 'NEQUI' | 'PAYPAL' | 'BINANCE' | 'WESTERN_UNION' | 'BBVA' | 'GLOBAL66' | 'NU_BANK' | 'WOMPI';
+export type PaymentMethod = 'BANCOLOMBIA' | 'NEQUI' | 'DAVIPLATA' | 'PAYPAL' | 'BINANCE' | 'WESTERN_UNION' | 'BBVA' | 'GLOBAL66' | 'NU_BANK' | 'WOMPI';
 
 export interface Transaction {
   id: string;
@@ -66,8 +74,9 @@ export interface Transaction {
   status: 'COMPLETED' | 'PENDING' | 'FAILED' | 'REVIEW';
   date: number;
   plan: SubscriptionPlan;
-  cycle: BillingCycle;
+  cycle?: BillingCycle;
   reference?: string;
+  invoiceUrl?: string;
 }
 
 export interface UserProfile {
@@ -85,8 +94,9 @@ export interface UserProfile {
     figmaToken?: string;
     openaiKey?: string;
     anthropicKey?: string;
-    endpoints?: string[];
     vercelToken?: string;
+    stripeKey?: string;
+    endpoints?: string[];
   };
   createdAt?: number;
   transactions?: Transaction[];
