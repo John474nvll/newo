@@ -1,0 +1,9 @@
+{
+  "name": "UBT Nexus Prime V12.0",
+  "description": "Enterprise Global Commerce & Neural Synthesis Node V12.0 Medellín.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

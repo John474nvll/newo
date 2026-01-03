@@ -1,0 +1,25 @@
+
+{
+  "short_name": "KordicoAI",
+  "name": "Kordico Neural Builder - AI No-Code",
+  "description": "Enterprise-grade neural synthesis engine for multi-stack development with Nordic Neon aesthetics.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#00162b",
+  "background_color": "#00162b",
+  "categories": ["developer", "productivity", "utilities"]
+}
